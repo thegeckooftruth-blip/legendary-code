@@ -1,150 +1,201 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css2?family=PlayfairDisplay:wght@300;400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-        .faq-item p {
-      margin: 0.4rem 0;
-      }
-      hr {
-          border:2px solid forestgreen;
-        padding-top:12px;
-        padding-bottom:12px;
-    }
-      div {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-}
-    section {
-      border: 4px solid forestgreen;
-      border-radius: 20px;
-      padding: 1rem;
-     }
-    .faq {
-      display: flex;
-      justify-content: space-around;
-      padding: 1rem;
-      border-top: 1px solid forestgreen;
-      gap: 1rem;
-  }
+    <meta charset="utf-8">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* === Global Styles === */
+        body {
+            background-color: #f8f9fa; /* Light, clean modern gray */
+            color: #1a202c; /* Crisp, highly readable dark charcoal text */
+            text-align: center;
+            font-family: 'Playfair Display', serif; /* Links your Google Font correctly */
+            margin: 0;
+            padding: 0 1rem;
+        }
 
-    .faq-item {
-      text-align: center;
-      width: 22%;
-    }
-    a {
-      text-decoration:none;
-      color:forestgreen;
-      font-size:18px;
-          
-    }
-    a:hover {
-      color:white;
-    }
-    body {
-      color:white;
-      background-color:black;
-      text-align:center;
-    }
-  </style>
+        hr {
+            border: 0;
+            border-top: 2px solid #10b981; /* Premium emerald green divider line */
+            margin: 1.5rem 0;
+        }
+
+        /* === Grid Layout === */
+        div {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* === Cards/Sections Styling === */
+        section {
+            background-color: #ffffff; /* Crisp white backgrounds for your cards */
+            border: 1px solid #e2e8f0; /* Ultra-thin, professional light gray borders */
+            border-radius: 12px; /* Smooth, modern corner rounding */
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Soft, premium depth shadow */
+        }
+
+        /* === Typography & Links === */
+        h1 {
+            color: #1a202c;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #10b981; /* Sleek emerald green for main headers */
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: #10b981; /* Matching accent green for clickable text */
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #047857; /* Deepens slightly on hover for clean visual feedback */
+        }
+
+        /* === FAQ Section Custom Setup === */
+        .faq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background-color: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .faq-item p {
+            margin: 0.4rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* === 📱 Mobile Responsive Rule === */
+        @media (max-width: 900px) {
+            div, .faq-grid {
+                grid-template-columns: 1fr; /* Instantly stacks everything into 1 neat column on phones */
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <hr>
-    <h1>Connor Cody | Freelance Web Design</h1>
-    <h2>Freelance Web Developer building fast, clean, and reliable websites.</h2>
-    <hr>
-  </header>
-  <main>
-    <div>
-    <section class="pricing">
-      <h2>Prices</h2>
-      <h3>
-        <strong>First Site | $150</strong><br>
-        <strong>Additional Sites | $45-65 per site</strong><br>
-        <strong>Updates | $10-15</strong><br>
-        <strong>Logo Refreshes | $35</strong><br>
-        <strong>Basic Search Engine Optimization | $45</strong>
-      </h3>
-    </section>
-    <section class="contact">
-    <h2>Contact Me</h2>
-    <a href="mailto:ccodygecko@gmail.com">Email Me</a>
-    <h3>I will respond within 24 hours</h3>
-  </section>
-    <section class="services">
-    <h2>Services</h2>
-    <h3>
-        I build fast, minimalist, modern, and reliable websites for my clients.<br>
-        I value strong client relationships and keep communication clear and collaborative.<br>
-        I create both business and personal sites with low prices, quick turnaround, and dependable service.<br>
-    </h3>
-    </section>
-    <section class="samples">
-      <h2>Sample Sites</h2>
-      <a href="https://codeysportfolio.netlify.app/">My Portfolio</a><br>
-      <a href="https://hamiltonfan.netlify.app/">A Site I Coded for a Friend</a><br>
-      <a href="https://codyghostwriters.netlify.app/">My Ghostwriting Site</a><br>
-      <h3>All of these sites focus on readability, consistent spacing, functionality, and everything that helps a site stand out while being professional</h3>
-      </section>
-    <section class="process">
-      <h2>My Coding Process</h2>
-      <h3>
-      I start by brainstorming and writing down ideas based on the concept you describe.<br>
-      Next, I build out all the sections you want your site to include.<br>
-      Then I style everything using CSS to create a clean, modern look.<br>
-      After that, I work with you to adjust anything you want changed.<br>
-      The full process usually takes around 3–4 hours.<br>
-      </h3>
-  </section>
-  <section class="about-me">
-  <h2>About Me</h2>
-  <h3>
-    I got into coding during the downtime between my lawn care clients, and it quickly
-    became a skill I enjoy using to build clean, modern websites. I like having a
-    productive way to fill my free time and create something useful for people.
-  </h3>
-  <h3>
-    I design websites that look good, load fast, and help people share what matters
-    to them. My goal is to make every site simple, readable, and tailored to each
-    client’s needs.
-  </h3>
-</section>
-  </div>
-<section class="faq">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <p><strong>Q: How long does a site take?</strong></p>
-    <p>A: A typical site takes around 3–4 hours.</p>
-  </div>
-
-  <div class="faq-item">
-    <p><strong>Q: Do you do updates?</strong></p>
-    <p>A: Yes, updates cost $10–15 depending on size.</p>
-  </div>
-
-  <div class="faq-item">
-    <p><strong>Q: Can you match a theme?</strong></p>
-    <p>A: Absolutely. I can match colors, layout, and style.</p>
-  </div>
-
-  <div class="faq-item">
-    <p><strong>Q: How much input do I need to give?</strong></p>
-    <p>A: Just the concept and any preferences you have.</p>
-  </div>
-</section>
-
-  </main>
-  <footer>
-    <hr>
-    <a href="mailto:ccodygecko@gmail.com">Email Me</a>
-    <h3>Fast, Reliable Sites</h3>
-    <h3>Support a Web Developer's Small Business</h3>
-    <a href="https://codeysportfolio.netlify.app/">See My Portfolio</a>
-    <hr>
-  </footer>
+    <header>
+        <hr>
+        <h1>Connor Cody | Freelance Web Design</h1>
+        <h2>Freelance Web Developer building fast, clean, and reliable websites.</h2>
+        <hr>
+    </header>
+    <main>
+        <div>
+            <section class="pricing">
+                <h2>Prices</h2>
+                <h3>
+                    <strong>First Site | $150</strong><br>
+                    <strong>Additional Sites | $45-65 per site</strong><br>
+                    <strong>Updates | $10-15</strong><br>
+                    <strong>Logo Refreshes | $35</strong><br>
+                    <strong>Basic Search Engine Optimization | $45</strong>
+                </h3>
+            </section>
+            <section class="contact">
+                <h2>Contact Me</h2>
+                <a href="mailto:ccodygecko@gmail.com">Email Me</a>
+                <h3>I will respond within 24 hours</h3>
+            </section>
+            <section class="services">
+                <h2>Services</h2>
+                <h3>
+                    I build fast, minimalist, modern, and reliable websites for my clients.<br>
+                    I value strong client relationships and keep communication clear and collaborative.<br>
+                    I create both business and personal sites with low prices, quick turnaround, and dependable service.<br>
+                </h3>
+            </section>
+            <section class="samples">
+                <h2>Sample Sites</h2>
+                <a href="https://codeysportfolio.netlify.app/">My Portfolio</a><br>
+                <a href="https://hamiltonfan.netlify.app/">A Site I Coded for a Friend</a><br>
+                <a href="https://codyghostwriters.netlify.app/">My Ghostwriting Site</a><br>
+                <h3>All of these sites focus on readability, consistent spacing, functionality, and everything that helps a site stand out while being professional</h3>
+            </section>
+            <section class="process">
+                <h2>My Coding Process</h2>
+                <h3>
+                    I start by brainstorming and writing down ideas based on the concept you describe.<br>
+                    Next, I build out all the sections you want your site to include.<br>
+                    Then I style everything using CSS to create a clean, modern look.<br>
+                    After that, I work with you to adjust anything you want changed.<br>
+                    The full process usually takes around 3–4 hours.<br>
+                </h3>
+            </section>
+            <section class="about-me">
+                <h2>About Me</h2>
+                <h3>
+                    I got into coding during the downtime between my lawn care clients, and it quickly became a skill I enjoy using to build clean, modern websites. I like having a productive way to fill my free time and create something useful for people.
+                </h3>
+                <h3>
+                    I design websites that look good, load fast, and help people share what matters to them. My goal is to make every site simple, readable, and tailored to each client’s needs.
+                </h3>
+            </section>
+        </div>
+        
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <p><strong>Q: How long does a site take?</strong></p>
+                    <p>A: A typical site takes around 3–4 hours.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>Q: Do you do updates?</strong></p>
+                    <p>A: Yes, updates cost $10–15 depending on size.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>Q: Can you match a theme?</strong></p> =
+                    <p>A: Absolutely. I can match colors, layout, and style.</p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>Q: How much input do I need to give?</strong></p>
+                    <p>A: Just the concept and any preferences you have.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <a href="mailto:ccodygecko@gmail.com">Email Me</a>
+        <h3>Fast, Reliable Sites</h3>
+        <h3>Support a Web Developer's Small Business</h3>
+        <a href="https://codeysportfolio.netlify.app/">See My Portfolio</a>
+        <hr>
+    </footer>
 </body>
 </html>
+
