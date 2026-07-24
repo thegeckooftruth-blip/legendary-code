@@ -2,9 +2,26 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        .samples a {
+  background-color: #f0fdf4;
+  color: #10b981;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+  margin: 0.25rem;
+  display: inline-block;
+}
+.samples a:hover {
+  background-color: #10b981;
+  color: white;
+}
+
         /* === Global Styles === */
         body {
             background-color: #f8f9fa; /* Light, clean modern gray */
@@ -104,15 +121,22 @@
                 grid-template-columns: 1fr; /* Instantly stacks everything into 1 neat column on phones */
             }
         }
+        section p {
+  font-family: system-ui, -apple-system, sans-serif; /* Clean sans-serif for body text */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left; /* Left-aligning body text inside centered cards looks cleaner */
+  color: #4a5568; /* Slightly softer gray for body text */
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <hr>
-        <h1>Cody Web Coding | Freelance Web Design</h1>
-        <h2>Freelance Web Developer building fast, clean, and reliable websites.</h2>
-        <hr>
+    <header style="background: linear-gradient(135deg, #ffffff, #f0fdf4); padding: 4rem 2rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2rem; border-radius: 0 0 24px 24px;">
+  <h1 style="font-size: 3rem; margin-bottom: 0.5rem; font-weight: 900;">Cody Web Coding</h1>
+  <p style="font-size: 1.25rem; color: #10b981; font-weight: 600; margin-top: 0;">Freelance Web Developer building fast, clean, and reliable websites.</p>
     </header>
+
     <main>
         <div>
             <section class="pricing">
