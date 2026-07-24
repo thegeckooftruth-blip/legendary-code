@@ -1,234 +1,288 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cody Web Coding | Freelance Web Design</title>
+  
+  <!-- Correctly loaded Google Font -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        header {
-  padding: 3rem 1rem;
-  margin-bottom: 2rem;
-}
-section h3, section p {
-  text-align: left;
-  line-height: 1.6;
-}
+  <style>
+    /* === Global Styles === */
+    body {
+      background-color: #f8f9fa; /* Light, clean modern gray */
+      color: #1a202c; /* Crisp, highly readable dark charcoal text */
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      padding: 0 1.5rem;
+    }
 
-        .samples a {
-  background-color: #f0fdf4;
-  color: #10b981;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  border: 1px solid #bbf7d0;
-  margin: 0.25rem;
-  display: inline-block;
-}
-.samples a:hover {
-  background-color: #10b981;
-  color: white;
-}
+    hr {
+      border: 0;
+      border-top: 2px solid #10b981; /* Premium emerald green divider line */
+      margin: 2rem 0;
+    }
 
-        /* === Global Styles === */
-        body {
-            background-color: #f8f9fa; /* Light, clean modern gray */
-            color: #1a202c; /* Crisp, highly readable dark charcoal text */
-            text-align: center;
-            font-family: 'Playfair Display', serif; /* Links your Google Font correctly */
-            margin: 0;
-            padding: 0 1rem;
-        }
+    /* === Header Section === */
+    header {
+      padding: 4rem 1rem 2.5rem 1rem;
+    }
 
-        hr {
-            border: 0;
-            border-top: 2px solid #10b981; /* Premium emerald green divider line */
-            margin: 1.5rem 0;
-        }
+    header h1 {
+      color: #1a202c;
+      font-size: 3rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: 800;
+    }
 
-        /* === Grid Layout === */
-        div {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+    header h2 {
+      color: #10b981; /* Sleek emerald green for main subtitle */
+      font-size: 1.25rem;
+      margin: 0;
+      font-weight: 500;
+    }
 
-        /* === Cards/Sections Styling === */
-        section {
-            background-color: #ffffff; /* Crisp white backgrounds for your cards */
-            border: 1px solid #e2e8f0; /* Ultra-thin, professional light gray borders */
-            border-radius: 12px; /* Smooth, modern corner rounding */
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Soft, premium depth shadow */
-        }
+    /* === Dedicated Content Grid Layout === */
+    .main-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        /* === Typography & Links === */
-        h1 {
-            color: #1a202c;
-            font-size: 2.5rem;
-        }
+    /* === Cards/Sections Styling === */
+    section {
+      background-color: #ffffff; /* Crisp white backgrounds for cards */
+      border: 1px solid #e2e8f0; /* Ultra-thin, professional light gray borders */
+      border-radius: 12px; /* Smooth, modern corner rounding */
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); /* Soft, premium depth shadow */
+      text-align: left; /* Aligns contents neatly to the left */
+    }
 
-        h2 {
-            color: #10b981; /* Sleek emerald green for main headers */
-            margin-top: 0;
-        }
+    section h2 {
+      color: #10b981;
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+      text-align: center; /* Keeps card titles centered for clean structure */
+    }
 
-        h3 {
-            font-size: 1rem;
-            line-height: 1.6;
-            font-weight: 400;
-        }
+    section p {
+      font-family: system-ui, -apple-system, sans-serif; /* High readability body font */
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4a5568;
+      margin: 0 0 1rem 0;
+    }
 
-        a {
-            text-decoration: none;
-            color: #10b981; /* Matching accent green for clickable text */
-            font-size: 18px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 0.5rem;
-            transition: color 0.2s ease;
-        }
+    section p:last-child {
+      margin-bottom: 0;
+    }
 
-        a:hover {
-            color: #047857; /* Deepens slightly on hover for clean visual feedback */
-        }
+    /* === Buttons & Interactive Links === */
+    a {
+      text-decoration: none;
+      color: #10b981;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: all 0.2s ease;
+    }
 
-        /* === FAQ Section Custom Setup === */
-        .faq {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+    /* Button variant for the portfolio samples */
+    .btn-link {
+      display: inline-block;
+      background-color: #f0fdf4;
+      color: #10b981;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: 1px solid #bbf7d0;
+      margin-bottom: 0.75rem;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.9rem;
+    }
 
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            width: 100%;
-            gap: 1rem;
-        }
+    .btn-link:hover {
+      background-color: #10b981;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
 
-        .faq-item {
-            background-color: #f8f9fa;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-        }
+    .contact-link {
+      display: block;
+      text-align: center;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
 
-        .faq-item p {
-            margin: 0.4rem 0;
-            font-size: 0.95rem;
-        }
+    .contact-link:hover {
+      color: #047857;
+    }
 
-        /* === 📱 Mobile Responsive Rule === */
-        @media (max-width: 900px) {
-            div, .faq-grid {
-                grid-template-columns: 1fr; /* Instantly stacks everything into 1 neat column on phones */
-            }
-        }
-        section p {
-  font-family: system-ui, -apple-system, sans-serif; /* Clean sans-serif for body text */
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: left; /* Left-aligning body text inside centered cards looks cleaner */
-  color: #4a5568; /* Slightly softer gray for body text */
-}
+    /* === FAQ Section Setup === */
+    .faq {
+      max-width: 1200px;
+      margin: 3rem auto 1rem auto;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
 
-    </style>
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: left;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+
+    .faq-item p strong {
+      color: #1a202c;
+    }
+
+    /* === Footer Setup === */
+    footer {
+      padding: 2rem 1rem 4rem 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #718096;
+      margin: 0.5rem 0;
+    }
+
+    footer a {
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+
+    /* === 📱 Mobile Responsive Layout === */
+    @media (max-width: 960px) {
+      .main-grid, .faq-grid {
+        grid-template-columns: 1fr; /* Stacks everything flawlessly onto mobile screens */
+      }
+      header h1 {
+        font-size: 2.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header style="background: linear-gradient(135deg, #ffffff, #f0fdf4); padding: 4rem 2rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 2rem; border-radius: 0 0 24px 24px;">
-  <h1 style="font-size: 3rem; margin-bottom: 0.5rem; font-weight: 900;">Cody Web Coding</h1>
-  <p style="font-size: 1.25rem; color: #10b981; font-weight: 600; margin-top: 0;">Freelance Web Developer building fast, clean, and reliable websites.</p>
-    </header>
 
-    <main>
-        <div>
-            <section class="pricing">
-                <h2>Prices</h2>
-                <h3>
-                    <strong>First Site | $150</strong><br>
-                    <strong>Additional Sites | $45-65 per site</strong><br>
-                    <strong>Updates | $10-15</strong><br>
-                    <strong>Logo Refreshes | $35</strong><br>
-                    <strong>Basic Search Engine Optimization | $45</strong>
-                </h3>
-            </section>
-            <section class="contact">
-                <h2>Contact Us</h2>
-                <a href="mailto:codywebcoding@gmail.com ">Email Us</a>
-                <h3>Responses will be sent within 24 hours</h3>
-            </section>
-            <section class="services">
-                <h2>Services</h2>
-                <h3>
-                    I build fast, minimalist, modern, and reliable websites for my clients.<br>
-                    I value strong client relationships and keep communication clear and collaborative.<br>
-                    I create both business and personal sites with low prices, quick turnaround, and dependable service.<br>
-                </h3>
-            </section>
-            <section class="samples">
-                <h2>Sample Sites</h2>
-                <a href="https://codeysportfolio.netlify.app/">My Portfolio</a><br>
-                <a href="https://hamiltonfan.netlify.app/">A Site I Coded for a Friend</a><br>
-                <a href="https://codyghostwriters.netlify.app/">My Ghostwriting Site</a><br>
-                <h3>All of these sites focus on readability, consistent spacing, functionality, and everything that helps a site stand out while being professional</h3>
-            </section>
-            <section class="process">
-                <h2>My Coding Process</h2>
-                <h3>
-                    I start by brainstorming and writing down ideas based on the concept you describe.<br>
-                    Next, I build out all the sections you want your site to include.<br>
-                    Then I style everything using CSS to create a clean, modern look.<br>
-                    After that, I work with you to adjust anything you want changed.<br>
-                    The full process usually takes around 3–4 hours.<br>
-                </h3>
-            </section>
-            <section class="about-me">
-                <h2>About Me</h2>
-                <h3>
-                    I got into coding during the downtime between my lawn care clients, and it quickly became a skill I enjoy using to build clean, modern websites. I like having a productive way to fill my free time and create something useful for people.
-                </h3>
-                <h3>
-                    I design websites that look good, load fast, and help people share what matters to them. My goal is to make every site simple, readable, and tailored to each client’s needs.
-                </h3>
-            </section>
+  <header>
+    <h1>Cody Web Coding</h1>
+    <h2>Freelance Web Developer building fast, clean, and reliable websites.</h2>
+  </header>
+
+  <main>
+    <!-- Combined Main Cards Container -->
+    <div class="main-grid">
+      
+      <section class="pricing">
+        <h2>Prices</h2>
+        <p><strong>First Site</strong> | $150</p>
+        <p><strong>Additional Sites</strong> | $45-65 per site</p>
+        <p><strong>Updates</strong> | $10-15</p>
+        <p><strong>Logo Refreshes</strong> | $35</p>
+        <p><strong>Basic Search Engine Optimization</strong> | $45</p>
+      </section>
+
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <a href="mailto:codywebcoding@gmail.com" class="contact-link">Email Us</a>
+        <p style="text-align: center; font-size: 0.9rem;">Responses will be sent within 24 hours.</p>
+      </section>
+
+      <section class="services">
+        <h2>Services</h2>
+        <p>I build fast, minimalist, modern, and reliable websites for my clients.</p>
+        <p>I value strong client relationships and keep communication clear and collaborative.</p>
+        <p>I create both business and personal sites with low prices, quick turnaround, and dependable service.</p>
+      </section>
+
+      <section class="samples">
+        <h2>Sample Sites</h2>
+        <a href="https://netlify.app" class="btn-link" target="_blank">My Portfolio</a><br>
+        <a href="https://netlify.app" class="btn-link" target="_blank">A Site I Coded for a Friend</a><br>
+        <a href="https://netlify.app" class="btn-link" target="_blank">My Ghostwriting Site</a>
+        <p style="margin-top: 1rem;">All of these sites focus on readability, consistent spacing, functionality, and everything that helps a site stand out while being professional.</p>
+      </section>
+
+      <section class="process">
+        <h2>My Coding Process</h2>
+        <p>1. I start by brainstorming and writing down ideas based on your concept.</p>
+        <p>2. Next, I build out all the essential structural sections your site needs.</p>
+        <p>3. Then I style everything using modern CSS to create a crisp look.</p>
+        <p>4. After that, I work directly with you to adjust anything you want changed.</p>
+        <p>The full process usually takes around 3–4 hours.</p>
+      </section>
+
+      <section class="about-me">
+        <h2>About Me</h2>
+        <p>I got into coding during the downtime between my lawn care clients, and it quickly became a skill I enjoy using to build clean, modern websites.</p>
+        <p>I design websites that look good, load fast, and help people share what matters to them. My goal is to make every site simple, readable, and tailored to each client’s needs.</p>
+      </section>
+      
+    </div>
+
+    <!-- FAQ Section Grid -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <p><strong>Q: How long does a site take?</strong></p>
+          <p>A: A typical site takes around 3–4 hours.</p>
         </div>
-        
-        <section class="faq">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <p><strong>Q: How long does a site take?</strong></p>
-                    <p>A: A typical site takes around 3–4 hours.</p>
-                </div>
-                <div class="faq-item">
-                    <p><strong>Q: Do you do updates?</strong></p>
-                    <p>A: Yes, updates cost $10–15 depending on size.</p>
-                </div>
-                <div class="faq-item">
-                    <p><strong>Q: Can you match a theme?</strong></p> 
-                    <p>A: Absolutely. I can match colors, layout, and style.</p>
-                </div>
-                <div class="faq-item">
-                    <p><strong>Q: How much input do I need to give?</strong></p>
-                    <p>A: Just the concept and any preferences you have.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <hr>
-        <a href="mailto:codywebcoding@gmail.com">Email Us</a>
-        <h3>Fast, Reliable Sites</h3>
-        <h3>Support a Web Developer's Small Business</h3>
-        <a href="https://codyportfolio.vercel.app/">See My Portfolio</a>
-        <hr>
-    </footer>
+        <div class="faq-item">
+          <p><strong>Q: Do you do updates?</strong></p>
+          <p>A: Yes, updates cost $10–15 depending on size.</p>
+        </div>
+        <div class="faq-item">
+          <p><strong>Q: Can you match a theme?</strong></p>
+          <p>A: Absolutely. I can match colors, layout, and style.</p>
+        </div>
+        <div class="faq-item">
+          <p><strong>Q: How much input do I need to give?</strong></p>
+          <p>A: Just the concept and any preferences you have.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <a href="mailto:codywebcoding@gmail.com">Email Us</a>
+    <p>Fast, Reliable Sites</p>
+    <p>Support a Web Developer's Small Business</p>
+    <a href="https://vercel.app">See My Portfolio</a>
+    <hr>
+  </footer>
+
 </body>
 </html>
+
 
