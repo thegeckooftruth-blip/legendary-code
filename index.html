@@ -12,6 +12,12 @@
 
   <style>
     /* === Global Styles === */
+    button {
+      color:#1a202c;
+      background-color:white;
+      border:3px solid #1a202c;
+      border-radius:16px;
+    }
     body {
       background-color: #f8f9fa; /* Light, clean modern gray */
       color: #1a202c; /* Crisp, highly readable dark charcoal text */
@@ -198,6 +204,15 @@
   </header>
 
   <main>
+    <form action="https://formspree.io/f/mrenoblb" method="POST">
+      <input type="email" id="email" placeholder="Enter your email here:">
+      <label for="email">What is your email?</label>
+      <input type="text" id="service" placeholder="Updates, Site, SEO, etc.">
+      <label for="service">What Do You Need?</label>
+      <input type="text" id="branding" placeholder="Primary-Emerald Green, Secondary-White, Logo-Example.png">
+      <label for="branding">What is your Branding?</label>
+      <button type="submit">Submit</button>
+    </form>
     <!-- Combined Main Cards Container -->
     <div class="main-grid">
       
@@ -278,7 +293,8 @@
     <a href="mailto:codywebcoding@gmail.com">Email Us</a>
     <p>Fast, Reliable Sites</p>
     <p>Support a Web Developer's Small Business</p>
-    <a href="https://vercel.app">See My Portfolio</a>
+    <a href="https://codyportfolio.vercel.app/">See My Portfolio</a>
+    <img src="codylogo.webp">
     <hr>
   </footer>
 
