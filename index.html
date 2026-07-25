@@ -94,6 +94,11 @@
     section p:last-child {
       margin-bottom: 0;
     }
+    img {
+      position:absolute;
+      top:0;
+      left:0;
+    }
 
     /* === Buttons & Interactive Links === */
     a {
@@ -135,7 +140,7 @@
     }
 
     /* === FAQ Section Setup === */
-    .faq {
+    .faq, img {
       max-width: 1200px;
       margin: 3rem auto 1rem auto;
       background: none;
@@ -210,9 +215,9 @@
     <form action="https://formspree.io/f/mrenoblb" method="POST">
       <label for="email">What is your email?</label>
       <input type="email" id="email" placeholder="Enter your email here:"><br>
-       <label for="service">What do you Need?</label>
+       <label for="service">How can we assist you?</label>
       <input type="text" id="service" placeholder="Updates, Site, SEO, etc."><br>
-       <label for="branding">What is your Branding?</label>
+       <label for="branding">What is your branding?</label>
       <input type="text" id="branding" placeholder="Primary-Emerald Green, Secondary-White, Logo-Example.png"><br>
       <button type="submit">Submit</button>
     </form>
