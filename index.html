@@ -44,7 +44,30 @@ button {
   padding: 0; /* Changed from 0 1.5rem to 0 */
 }
 
+input, textarea {
+   padding: 10px 14px; /* Gives nice breathing room inside the boxes */
+    margin-top: 6px;    /* Pushes the input box slightly away from the label */
+    margin-bottom: 16px;/* Creates clean separation before the next label */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;        /* Ensures consistent width across fields */
+    max-width: 350px;   /* Keeps the form from getting too wide */
+    box-sizing: border-box;
+}
+      input[type="submit"], .email-button-class {
+    padding: 12px 24px;
+    background-color: #00a86b; /* Use your primary green brand color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
 
+input[type="submit"]:hover {
+    background-color: #008f5a; /* Darkens slightly when hovered */
+}
     hr {
       border: 0;
       border-top: 2px solid #10b981; /* Premium emerald green divider line */
